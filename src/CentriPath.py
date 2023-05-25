@@ -34,7 +34,7 @@ class CentriPath:
         plt.plot([-0.5*self.b_2, 0.5*self.b_2], [0.5*self.D_2, 0.5*self.D_2], color="black")
 
         # DRAW CIRCLES
-        if plot_circles== True:
+        if plot_circles == True:
             mean_inlet = 0.5 *(0.5*self.D_S + 0.5*self.D_hub)
             radius_inlet = 0.25*(self.D_S-self.D_hub)
             radius_outlet = self.b_2*0.5
@@ -48,6 +48,7 @@ class CentriPath:
         
         plt.draw()
         ax.set_aspect('equal')
+        plt.show()
         
     def plot_bezier(self):
         """
@@ -123,10 +124,10 @@ class CentriPath:
         
         
         
-test_plot = CentriPath(350, 15, 60, 160, 60)
-test_plot.calc_bezier_profile(Profiles.HUB)
-test_plot.plot_inlet_outlet(plot_circles=True)
-test_plot.plot_bezier()
+# test_plot = CentriPath(350, 15, 60, 160, 60)
+# test_plot.calc_bezier_profile(Profiles.HUB)
+# test_plot.plot_inlet_outlet(plot_circles=True)
+# test_plot.plot_bezier()
     
     
 
